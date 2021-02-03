@@ -86,6 +86,7 @@ namespace MyTest
         public partial class RxMainFrameAppFolder : RepoGenBaseFolder
         {
             RepoItemInfo _testdatabaseInfo;
+            RepoItemInfo _uielementtestareaInfo;
 
             /// <summary>
             /// Creates a new RxMainFrame  folder.
@@ -94,6 +95,7 @@ namespace MyTest
                     base("RxMainFrame", "/form[@controlname='RxMainFrame']", parentFolder, 30000, null, true, "d6e46d87-92aa-4885-9b8f-3dda6674f81d", "")
             {
                 _testdatabaseInfo = new RepoItemInfo(this, "TestDatabase", "?/?/tabpage[@accessiblename='Test database']", 30000, null, "a1945421-2562-4d93-ba9e-e14144b6c67b");
+                _uielementtestareaInfo = new RepoItemInfo(this, "UIElementTestArea", "?/?/tabpage[@accessiblename='UI-element test area']", 30000, null, "6e8000a5-6652-4c31-9d50-be319093fdf1");
             }
 
             /// <summary>
@@ -141,6 +143,30 @@ namespace MyTest
                 get
                 {
                     return _testdatabaseInfo;
+                }
+            }
+
+            /// <summary>
+            /// The UIElementTestArea item.
+            /// </summary>
+            [RepositoryItem("6e8000a5-6652-4c31-9d50-be319093fdf1")]
+            public virtual Ranorex.TabPage UIElementTestArea
+            {
+                get
+                {
+                    return _uielementtestareaInfo.CreateAdapter<Ranorex.TabPage>(true);
+                }
+            }
+
+            /// <summary>
+            /// The UIElementTestArea item info.
+            /// </summary>
+            [RepositoryItemInfo("6e8000a5-6652-4c31-9d50-be319093fdf1")]
+            public virtual RepoItemInfo UIElementTestAreaInfo
+            {
+                get
+                {
+                    return _uielementtestareaInfo;
                 }
             }
         }

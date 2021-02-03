@@ -31,6 +31,16 @@ name="MyTestRepository">
 			searchtimeout="30000ms">
 				/form[@controlname='RxMainFrame']/?/?/tabpage[@accessiblename='Test database']
 			</item>
+			<item
+			addcaps="tabpage,accessible"
+			capname="tabpage"
+			id="6e8000a5-6652-4c31-9d50-be319093fdf1"
+			name="UIElementTestArea"
+			refimgid="5da3f706-77fc-445a-8578-7b99cfea2466"
+			refpath="/form[@controlname='RxMainFrame']/tabpagelist[@controlname='RxTabcontrol']/tabpage[@accessiblename='UI-element test area']"
+			searchtimeout="30000ms">
+				/form[@controlname='RxMainFrame']/?/?/tabpage[@accessiblename='UI-element test area']
+			</item>
 			<basepath>
 				/form[@controlname='RxMainFrame']
 			</basepath>
